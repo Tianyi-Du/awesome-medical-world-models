@@ -1,213 +1,213 @@
-# 📦 Datasets & Benchmarks 数据集与基准
+# Datasets & Benchmarks
 
-本文档详细介绍可用于训练和评估医学世界模型的数据集。
+This document provides detailed information on datasets available for training and evaluating medical world models.
 
 ---
 
-## 手术视频 (Surgical Video)
+## Surgical Video
 
 ### SurgToolLoc-2022
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | da Vinci手术机器人训练视频，展示解剖组织和缝合等标准活动 |
-| **规模** | 24,695个视频片段，每段30秒 |
-| **分辨率** | 1280 x 720, 60fps |
-| **标注** | 14种手术工具的存在标签 |
-| **可用性** | 🔓 公开 |
-| **链接** | [Grand Challenge](https://surgtoolloc.grand-challenge.org/) |
-| **相关论文** | Surgical Vision World Model |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | da Vinci surgical robot training videos showing standard activities like tissue dissection and suturing |
+| **Size** | 24,695 video clips, 30 seconds each |
+| **Resolution** | 1280 x 720, 60fps |
+| **Annotations** | Presence labels for 14 surgical tools |
+| **Availability** | 🔓 Public |
+| **Link** | [Grand Challenge](https://surgtoolloc.grand-challenge.org/) |
+| **Related Papers** | Surgical Vision World Model |
 
-**使用建议**：
-- 适合训练动作可控的手术视频生成模型
-- 16帧采样@1fps 是常用设置
-- 中心裁剪900x600可去除黑边
+**Usage Tips:**
+- Suitable for training action-controllable surgical video generation models
+- 16-frame sampling @1fps is a common setting
+- Center crop to 900x600 to remove black borders
 
 ---
 
-## 胸部影像 (Chest Imaging)
+## Chest Imaging
 
 ### MIMIC-CXR
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | 大规模胸部X光数据集，包含放射学报告 |
-| **规模** | 377,110张图像，227,827份报告 |
-| **可用性** | 🔐 需要PhysioNet认证 |
-| **链接** | [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/) |
-| **相关论文** | CheXWorld, X-WIN |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | Large-scale chest X-ray dataset with radiology reports |
+| **Size** | 377,110 images, 227,827 reports |
+| **Availability** | 🔐 Requires PhysioNet credentialing |
+| **Link** | [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/) |
+| **Related Papers** | CheXWorld, X-WIN |
 
-**使用建议**：
-- 申请流程约1-2周
-- 常用于预训练和评估
-- 包含正面和侧面视图
+**Usage Tips:**
+- Application process takes approximately 1-2 weeks
+- Commonly used for pre-training and evaluation
+- Includes frontal and lateral views
 
 ### NLST (National Lung Screening Trial)
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | 肺癌筛查CT数据集 |
-| **规模** | 32,371例CT扫描 |
-| **可用性** | 🔐 需要申请 |
-| **链接** | [CDAS](https://cdas.cancer.gov/nlst/) |
-| **相关论文** | X-WIN |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | Lung cancer screening CT dataset |
+| **Size** | 32,371 CT scans |
+| **Availability** | 🔐 Requires application |
+| **Link** | [CDAS](https://cdas.cancer.gov/nlst/) |
+| **Related Papers** | X-WIN |
 
-**使用建议**：
-- 可用于生成模拟X光投影
-- 提供3D体积信息
+**Usage Tips:**
+- Can be used to generate simulated X-ray projections
+- Provides 3D volumetric information
 
 ---
 
-## 脑部MRI (Brain MRI)
+## Brain MRI
 
 ### MU-Glioma-Post
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | 密苏里大学术后胶质瘤数据集 |
-| **规模** | 203例患者，654次MRI随访 |
-| **标注** | 治疗记录、基因组注释、生存数据 |
-| **可用性** | 🔓 公开 |
-| **链接** | [TCIA](https://www.cancerimagingarchive.net/) |
-| **相关论文** | CLARITY |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | University of Missouri post-operative glioma dataset |
+| **Size** | 203 patients, 654 MRI follow-ups |
+| **Annotations** | Treatment records, genomic annotations, survival data |
+| **Availability** | 🔓 Public |
+| **Link** | [TCIA](https://www.cancerimagingarchive.net/) |
+| **Related Papers** | CLARITY |
 
-**使用建议**：
-- 包含丰富的纵向数据
-- 适合疾病进展建模
-- 4:1患者级别划分避免时间泄漏
+**Usage Tips:**
+- Contains rich longitudinal data
+- Suitable for disease progression modeling
+- 4:1 patient-level split to avoid temporal leakage
 
 ### UCSF-ALPTDG
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | UCSF成人纵向术后弥漫性胶质瘤数据集 |
-| **规模** | 298例患者 |
-| **标注** | 纵向MRI序列、生存结果 |
-| **可用性** | 🔓 公开 |
-| **链接** | [TCIA](https://www.cancerimagingarchive.net/) |
-| **相关论文** | CLARITY |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | UCSF Adult Longitudinal Post-Treatment Diffuse Glioma dataset |
+| **Size** | 298 patients |
+| **Annotations** | Longitudinal MRI sequences, survival outcomes |
+| **Availability** | 🔓 Public |
+| **Link** | [TCIA](https://www.cancerimagingarchive.net/) |
+| **Related Papers** | CLARITY |
 
-**使用建议**：
-- 可用于外部验证
-- 与MU-Glioma-Post互补
+**Usage Tips:**
+- Can be used for external validation
+- Complementary to MU-Glioma-Post
 
 ---
 
-## 疾病诊断 (Disease Diagnosis)
+## Disease Diagnosis
 
 ### VinDr-CXR
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | 越南胸部X光数据集 |
-| **规模** | 18,000张图像 |
-| **标注** | 放射科医生标注的病变 |
-| **可用性** | 🔓 公开 |
-| **链接** | [VinDr](https://vindr.ai/) |
-| **相关论文** | X-WIN |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | Vietnamese chest X-ray dataset |
+| **Size** | 18,000 images |
+| **Annotations** | Radiologist-annotated lesions |
+| **Availability** | 🔓 Public |
+| **Link** | [VinDr](https://vindr.ai/) |
+| **Related Papers** | X-WIN |
 
 ### CheXpert
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | 斯坦福胸部X光数据集 |
-| **规模** | 224,316张图像 |
-| **标注** | 14种病理标签（带不确定性） |
-| **可用性** | 🔓 公开 |
-| **链接** | [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | Stanford chest X-ray dataset |
+| **Size** | 224,316 images |
+| **Annotations** | 14 pathology labels (with uncertainty) |
+| **Availability** | 🔓 Public |
+| **Link** | [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/) |
 
 ### NIH Chest X-ray
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | NIH临床中心胸部X光数据集 |
-| **规模** | 112,120张图像 |
-| **标注** | 14种疾病标签 |
-| **可用性** | 🔓 公开 |
-| **链接** | [NIH](https://nihcc.app.box.com/v/ChestXray-NIHCC) |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | NIH Clinical Center chest X-ray dataset |
+| **Size** | 112,120 images |
+| **Annotations** | 14 disease labels |
+| **Availability** | 🔓 Public |
+| **Link** | [NIH](https://nihcc.app.box.com/v/ChestXray-NIHCC) |
 
 ---
 
-## 超声 (Ultrasound)
+## Ultrasound
 
-### 心脏超声数据集
+### Cardiac Ultrasound Datasets
 
-（EchoWorld和Cardiac Copilot使用的数据集信息待补充）
+(Dataset information used by EchoWorld and Cardiac Copilot to be added)
 
 ---
 
-## 电子病历 (EHR)
+## Electronic Health Records (EHR)
 
 ### Epic Cosmos
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | Epic系统的大规模EHR数据 |
-| **规模** | 数十亿医疗事件 |
-| **可用性** | 🔒 需要合作协议 |
-| **相关论文** | CoMET |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | Large-scale EHR data from Epic systems |
+| **Size** | Billions of medical events |
+| **Availability** | 🔒 Requires partnership agreement |
+| **Related Papers** | CoMET |
 
-**注意**：此数据集通常不对外公开，仅通过Epic合作使用。
+**Note:** This dataset is typically not publicly available; access only through Epic partnerships.
 
 ---
 
-## 乳腺癌 (Breast Cancer)
+## Breast Cancer
 
 ### I-SPY2
 
-| 属性 | 信息 |
-|------|------|
-| **描述** | 多中心新辅助化疗试验数据 |
-| **内容** | 临床变量、治疗方案、pCR结果 |
-| **可用性** | 🔐 需要申请 |
-| **链接** | [I-SPY](https://www.ispytrials.org/) |
-| **相关论文** | CLARITY |
+| Attribute | Information |
+|-----------|-------------|
+| **Description** | Multi-center neoadjuvant chemotherapy trial data |
+| **Content** | Clinical variables, treatment protocols, pCR outcomes |
+| **Availability** | 🔐 Requires application |
+| **Link** | [I-SPY](https://www.ispytrials.org/) |
+| **Related Papers** | CLARITY |
 
 ---
 
-## 数据获取建议
+## Data Access Recommendations
 
-### 优先使用（公开且易获取）
+### Priority (Public & Easy Access)
 
-1. **SurgToolLoc-2022** - 手术视频，直接下载
-2. **MU-Glioma-Post** - 脑MRI，TCIA下载
-3. **CheXpert** - 胸部X光，注册即可
-4. **NIH Chest X-ray** - 胸部X光，直接下载
+1. **SurgToolLoc-2022** - Surgical video, direct download
+2. **MU-Glioma-Post** - Brain MRI, TCIA download
+3. **CheXpert** - Chest X-ray, registration required
+4. **NIH Chest X-ray** - Chest X-ray, direct download
 
-### 需要申请认证
+### Requires Credentialing
 
-1. **MIMIC-CXR** - 需要完成PhysioNet培训（约2-3小时）
-2. **NLST** - 需要提交研究计划
+1. **MIMIC-CXR** - Requires PhysioNet training completion (~2-3 hours)
+2. **NLST** - Requires research proposal submission
 
-### 机构合作
+### Institutional Partnership
 
-1. **Epic Cosmos** - 需要与Epic建立合作关系
+1. **Epic Cosmos** - Requires partnership with Epic
 
 ---
 
-## 数据预处理建议
+## Data Preprocessing Tips
 
-### 医学影像
+### Medical Imaging
 
 ```python
-# 常用预处理流程
-1. 标准化到 [0, 1] 或 [-1, 1]
-2. 调整分辨率 (常用: 224x224, 512x512)
-3. 去除黑边和overlay
-4. 直方图均衡化 (可选)
+# Common preprocessing pipeline
+1. Normalize to [0, 1] or [-1, 1]
+2. Resize (common: 224x224, 512x512)
+3. Remove black borders and overlays
+4. Histogram equalization (optional)
 ```
 
-### 时序数据
+### Temporal Data
 
 ```python
-# 纵向数据处理
-1. 按患者ID分组
-2. 按时间排序
-3. 计算时间间隔 (delta_t)
-4. 处理缺失值
-5. 患者级别划分 (避免数据泄漏)
+# Longitudinal data processing
+1. Group by patient ID
+2. Sort by time
+3. Calculate time intervals (delta_t)
+4. Handle missing values
+5. Patient-level split (avoid data leakage)
 ```
 
 ---
 
-[← 返回主页](../README.md)
+[← Back to Home](../README.md)
