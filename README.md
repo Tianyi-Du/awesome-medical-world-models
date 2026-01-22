@@ -230,11 +230,11 @@ Prediction Conditioned Rollouts       & Control
 | NLST | 32K CT scans | X-WIN, Xray2Xray | 🔐 Application | [CDAS](https://cdas.cancer.gov/nlst/) |
 | NIH ChestX-ray14 | 112K images | CheXWorld, X-WIN | 🔓 Public | [NIH Box](https://nihcc.app.box.com/v/ChestXray-NIHCC) |
 | CheXpert | 224K images | X-WIN, Xray2Xray | 🔓 Public | [Stanford AIMI](https://aimi.stanford.edu/datasets/chexpert-chest-x-rays) |
-| VinDr-CXR | 18K images | CheXWorld, X-WIN | 🔓 Public | [VinDr](https://vindr.ai/datasets/cxr) |
-| ShenZhen-CXR | 662 images | CheXWorld | 🔓 Public | [LHNCBC](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html) |
+| VinDr-CXR | 18K images | CheXWorld, X-WIN | 🔓 Public | [PhysioNet](https://physionet.org/content/vindr-cxr/1.0.0/) |
+| ShenZhen-CXR | 662 images | CheXWorld | 🔓 Public | [LHNCBC](https://data.lhncbc.nlm.nih.gov/public/Tuberculosis-Chest-X-ray-Datasets/Shenzhen-Hospital-CXR-Set/) |
 | RSNA Pneumothorax | 12K images | CheXWorld | 🔓 Public | [Kaggle](https://www.kaggle.com/c/siim-acr-pneumothorax-segmentation) |
 | RSNA Pneumonia | 30K images | X-WIN | 🔓 Public | [Kaggle](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge) |
-| JSRT | 247 images | X-WIN | 🔓 Public | [JSRT Database](http://db.jsrt.or.jp/eng.php) |
+| JSRT | 247 images | X-WIN | 🔓 Public | [Kaggle](https://www.kaggle.com/datasets/raddar/nodules-in-chest-xrays-jsrt) |
 | COVIDx | 30K+ images | X-WIN | 🔓 Public | [GitHub](https://github.com/lindawangg/COVID-Net) |
 
 ### Brain MRI / Tumor Datasets
@@ -243,7 +243,7 @@ Prediction Conditioned Rollouts       & Control
 |---------|------|---------|--------------|------|
 | MU-Glioma-Post | 203 patients, 654 MRIs | CLARITY | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/mu-glioma-post/) |
 | UCSF-ALPTDG | 298 patients, 596 MRIs | CLARITY | 🔓 Public | [UCSF Datasets](https://imagingdatasets.ucsf.edu/dataset/2) |
-| I-SPY2 | Multi-center trial | CLARITY | 🔐 Application | [I-SPY Trials](https://www.ispytrials.org/) |
+| I-SPY2 | Multi-center trial | CLARITY | 🔐 Application | [Quantum Leap Healthcare](https://www.quantumleaphealth.org/) |
 | HCC-TACE-SEG | 105 patients | MeWM | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/hcc-tace-seg/) |
 
 ### Surgical Video Datasets
@@ -252,9 +252,9 @@ Prediction Conditioned Rollouts       & Control
 |---------|------|---------|--------------|------|
 | SurgToolLoc-2022 | 24,695 clips | Surgical Vision WM | 🔓 Public | [Grand Challenge](https://surgtoolloc.grand-challenge.org/) |
 | SAR-RARP50 | 50 videos | SurgWorld | 🔓 Public | [Synapse](https://www.synapse.org/#!Synapse:syn27618412) |
-| AutoLaparo | 21 videos | SurgWorld | 🔓 Public | [GitHub](https://github.com/wz16/AutoLaparo) |
+| AutoLaparo | 21 videos | SurgWorld | 🔓 Public | [GitHub](https://github.com/ziyiwangx/AutoLaparo) |
 | GraSP | Surgical scenes | SurgWorld | 🔓 Public | [arXiv](https://arxiv.org/abs/2401.11174) |
-| HeiCo | Colorectal surgery | SurgWorld | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/heico/) |
+| HeiCo | Colorectal surgery | SurgWorld | 🔓 Public | [Synapse](https://www.synapse.org/Synapse:syn21903917) |
 | Multiypass140 | 140 videos | SurgWorld | 🔐 Request | [CAMMA](https://camma.unistra.fr/) |
 | SurgicalActions160 | 160 videos | SurgWorld | 🔐 Request | [Publication](https://doi.org/10.1007/s11042-017-5252-2) |
 
