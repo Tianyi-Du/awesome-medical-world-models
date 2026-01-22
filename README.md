@@ -132,16 +132,23 @@ Prediction Conditioned Rollouts       & Control
 **EchoWorld: Learning Motion-Aware World Models for Echocardiography Probe Guidance.** [CVPR 2025]<br>
 *Yang Yue, Yulin Wang, Haojun Jiang, Pan Liu, Shiji Song, Gao Huang.*<br>
 `L2` `Ultrasound` `Cardiac` `Probe Guidance` `Motion-Aware`<br>
-[[PDF](https://arxiv.org/abs/2504.xxxxx)]
+[[PDF](https://arxiv.org/abs/2504.13065)] [[Github](https://github.com/LeapLabTHU/EchoWorld)]
 
 > Motion-aware cardiac ultrasound world model that encodes anatomical structures and probe motion effects, reducing plane guidance error.
 
 **Cardiac Copilot: Automatic Probe Guidance for Echocardiography with World Model.** [MICCAI 2024]<br>
 *Haojun Jiang, Zhenguo Sun, Ning Jia, et al.*<br>
 `L2` `Ultrasound` `Cardiac` `Navigation` `Real-time`<br>
-[[PDF](https://arxiv.org/abs/2406.xxxxx)]
+[[PDF](https://arxiv.org/abs/2406.13165)]
 
 > Introduces "Cardiac Dreamer" world model where latent space features provide navigation maps for real-time probe guidance.
+
+**Structure-aware World Model for Probe Guidance via Large-scale Self-supervised Pre-train.** [MICCAI 2024]<br>
+*Haojun Jiang, Meng Li, Zhenguo Sun, et al.*<br>
+`L2` `Ultrasound` `Cardiac` `Self-supervised` `Large-scale`<br>
+[[PDF](https://arxiv.org/abs/2406.19756)]
+
+> Large-scale self-supervised pre-training to acquire cardiac structure-aware world model using 1.36M echocardiograms.
 
 ---
 
@@ -160,6 +167,27 @@ Prediction Conditioned Rollouts       & Control
 [[PDF](https://arxiv.org/abs/2405.17940)]
 
 > World model-based reinforcement learning controller for general surgical grasping, robust to object variations and perturbations.
+
+**SurgWorld: Learning Surgical Robot Policies from Videos via World Modeling.** [Dec 2025]<br>
+*Yufan He, Pengfei Guo, Mengya Xu, et al.*<br>
+`L4` `Surgical Robot` `VLA` `Cosmos 2.5` `Policy Learning`<br>
+[[PDF](https://arxiv.org/abs/2512.23162)]
+
+> Builds surgical world model using Cosmos 2.5, infers pseudo-kinematics via inverse dynamics for training surgical VLA policies.
+
+**Towards Suturing World Models: Learning Predictive Models for Robotic Surgical Tasks.** [Mar 2025]<br>
+*Mehmet Kerem Turkcan, Mattia Ballo, Filippo Filicori, Zoran Kostic.*<br>
+`L3` `Surgical` `Suturing` `Diffusion` `Video Prediction`<br>
+[[PDF](https://arxiv.org/abs/2503.12531)] [[Project](https://mkturkcan.github.io/suturingmodels/)]
+
+> Diffusion-based world models for surgical suturing, fine-tuned LTX-Video and HunyuanVideo for high-fidelity action sequences.
+
+**World Model for AI Autonomous Navigation in Mechanical Thrombectomy.** [MICCAI 2025]<br>
+*H. Robertshaw, HR. Wu, A. Granados, T.C. Booth.*<br>
+`L4` `Catheter Navigation` `Thrombectomy` `TD-MPC2` `Reinforcement Learning`<br>
+[[PDF](https://arxiv.org/abs/2509.25518)]
+
+> TD-MPC2 world model for autonomous endovascular navigation, achieves 65% success rate vs SAC's 37%.
 
 ---
 
@@ -182,10 +210,14 @@ Prediction Conditioned Rollouts       & Control
 | Xray2Xray | ✅ | | | | Radiology | Transformer |
 | EchoWorld | | ✅ | | | Ultrasound | World Model |
 | Cardiac Copilot | | ✅ | | | Ultrasound | WM + Nav |
+| Structure-aware WM | | ✅ | | | Ultrasound | Self-supervised |
 | MeWM | | ✅ | ✅ | | Tumor/CT | Diffusion |
 | CLARITY | | ✅ | ✅ | ✅ | MRI/Treatment | Latent Dynamics |
 | Surgical Vision WM | | ✅ | ✅ | | Surgery | VQ-VAE + Transformer |
 | WM-Grasp | | | | ✅ | Surgical Robotics | Dreamer-style |
+| SurgWorld | | | | ✅ | Surgical Robot | Cosmos 2.5 |
+| Suturing WM | | | ✅ | | Surgical | Diffusion |
+| Thrombectomy WM | | | | ✅ | Catheter Nav | TD-MPC2 |
 
 ---
 
