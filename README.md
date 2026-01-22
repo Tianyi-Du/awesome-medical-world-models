@@ -6,9 +6,6 @@
 
 > A curated list of **World Models for Healthcare**: prediction, simulation, counterfactual reasoning, and clinical decision support.
 
-<p align="center">
-  <img src="figures/overview.png" width="700">
-</p>
 
 ---
 
