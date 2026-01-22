@@ -238,14 +238,136 @@ Prediction Conditioned Rollouts       & Control
 
 ## Datasets & Benchmarks
 
-| Dataset | Modality | Size | Task | Availability |
-|---------|----------|------|------|--------------|
-| [SurgToolLoc-2022](https://surgtoolloc.grand-challenge.org/) | Surgical Video | 24,695 clips | Tool Localization | 🔓 Public |
-| [MIMIC-CXR](https://physionet.org/content/mimic-cxr/2.0.0/) | Chest X-ray | 377K images | Diagnosis | 🔐 Credentialed |
-| [NLST](https://cdas.cancer.gov/nlst/) | Chest CT | 32K scans | Lung Screening | 🔐 Application |
-| [MU-Glioma-Post](https://www.cancerimagingarchive.net/) | Brain MRI | 203 patients | Tumor Progression | 🔓 Public |
-| [UCSF-ALPTDG](https://www.cancerimagingarchive.net/) | Brain MRI | 298 patients | Glioma Follow-up | 🔓 Public |
-| [I-SPY2](https://www.ispytrials.org/) | Breast MRI + Clinical | Multi-center | Treatment Response | 🔐 Application |
+### Chest X-ray / CT Datasets
+
+| Dataset | Size | Used By | Availability | Link |
+|---------|------|---------|--------------|------|
+| MIMIC-CXR | 377K images | X-WIN | 🔐 Credentialed | [PhysioNet](https://physionet.org/content/mimic-cxr/2.0.0/) |
+| NLST | 32K CT scans | X-WIN, Xray2Xray | 🔐 Application | [CDAS](https://cdas.cancer.gov/nlst/) |
+| NIH ChestX-ray14 | 112K images | CheXWorld, X-WIN | 🔓 Public | [NIH Box](https://nihcc.app.box.com/v/ChestXray-NIHCC) |
+| CheXpert | 224K images | X-WIN, Xray2Xray | 🔓 Public | [Stanford AIMI](https://aimi.stanford.edu/datasets/chexpert-chest-x-rays) |
+| VinDr-CXR | 18K images | CheXWorld, X-WIN | 🔓 Public | [VinDr](https://vindr.ai/datasets/cxr) |
+| ShenZhen-CXR | 662 images | CheXWorld | 🔓 Public | [LHNCBC](https://lhncbc.nlm.nih.gov/LHC-downloads/downloads.html) |
+| RSNA Pneumothorax | 12K images | CheXWorld | 🔓 Public | [Kaggle](https://www.kaggle.com/c/siim-acr-pneumothorax-segmentation) |
+| RSNA Pneumonia | 30K images | X-WIN | 🔓 Public | [Kaggle](https://www.kaggle.com/c/rsna-pneumonia-detection-challenge) |
+| JSRT | 247 images | X-WIN | 🔓 Public | [JSRT Database](http://db.jsrt.or.jp/eng.php) |
+| COVIDx | 30K+ images | X-WIN | 🔓 Public | [GitHub](https://github.com/lindawangg/COVID-Net) |
+
+### Brain MRI / Tumor Datasets
+
+| Dataset | Size | Used By | Availability | Link |
+|---------|------|---------|--------------|------|
+| MU-Glioma-Post | 203 patients, 654 MRIs | CLARITY | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/mu-glioma-post/) |
+| UCSF-ALPTDG | 298 patients, 596 MRIs | CLARITY | 🔓 Public | [UCSF Datasets](https://imagingdatasets.ucsf.edu/dataset/2) |
+| I-SPY2 | Multi-center trial | CLARITY | 🔐 Application | [I-SPY Trials](https://www.ispytrials.org/) |
+| HCC-TACE-SEG | 105 patients | MeWM | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/hcc-tace-seg/) |
+
+### Surgical Video Datasets
+
+| Dataset | Size | Used By | Availability | Link |
+|---------|------|---------|--------------|------|
+| SurgToolLoc-2022 | 24,695 clips | Surgical Vision WM | 🔓 Public | [Grand Challenge](https://surgtoolloc.grand-challenge.org/) |
+| SAR-RARP50 | 50 videos | SurgWorld | 🔓 Public | [Synapse](https://www.synapse.org/#!Synapse:syn27618412) |
+| AutoLaparo | 21 videos | SurgWorld | 🔓 Public | [GitHub](https://github.com/wz16/AutoLaparo) |
+| GraSP | Surgical scenes | SurgWorld | 🔓 Public | [arXiv](https://arxiv.org/abs/2401.11174) |
+| HeiCo | Colorectal surgery | SurgWorld | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/heico/) |
+| Multiypass140 | 140 videos | SurgWorld | 🔐 Request | [CAMMA](https://camma.unistra.fr/) |
+| SurgicalActions160 | 160 videos | SurgWorld | 🔐 Request | [Publication](https://doi.org/10.1007/s11042-017-5252-2) |
+
+### Simulation & Tools
+
+| Resource | Description | Used By | Link |
+|----------|-------------|---------|------|
+| stEVE | Endovascular simulation framework | Thrombectomy WM | [GitHub](https://github.com/lkarstensen/stEVE) |
+| SOFA | Physics simulation framework | Thrombectomy WM | [SOFA](https://www.sofa-framework.org/) |
+
+### Datasets by Paper
+
+<details>
+<summary><b>X-WIN</b> - Click to expand</summary>
+
+- **Training**: MIMIC-CXR (371K CXRs), NLST (32K CT scans)
+- **Evaluation**: VinDr-CXR, CheXpert, NIH-CXR, RSNA, JSRT, COVIDx
+</details>
+
+<details>
+<summary><b>CheXWorld</b> - Click to expand</summary>
+
+- **Pre-training & Fine-tuning**: NIH ChestX-ray14
+- **Fine-tuning**: VinDr-CXR, ShenZhen-CXR, RSNA Pneumothorax
+</details>
+
+<details>
+<summary><b>Xray2Xray</b> - Click to expand</summary>
+
+- **Training**: NLST (1,000 CT volumes)
+- **Evaluation**: CheXpert
+</details>
+
+<details>
+<summary><b>CLARITY</b> - Click to expand</summary>
+
+- **Primary**: MU-Glioma-Post (203 patients, 654 MRI follow-ups)
+- **External Validation**: UCSF-ALPTDG (298 patients)
+- **Cross-disease**: I-SPY2 (breast cancer trial)
+</details>
+
+<details>
+<summary><b>MeWM</b> - Click to expand</summary>
+
+- **Training & Evaluation**: HCC-TACE-SEG (105 HCC patients, pre/post-TACE CT)
+</details>
+
+<details>
+<summary><b>EchoWorld</b> - Click to expand</summary>
+
+- **Training**: Proprietary (1M+ echocardiograms from 200+ scans)
+</details>
+
+<details>
+<summary><b>Cardiac Copilot</b> - Click to expand</summary>
+
+- **Training**: Proprietary (110 clinical scans, 151K sample pairs)
+</details>
+
+<details>
+<summary><b>Structure-aware WM</b> - Click to expand</summary>
+
+- **Training**: Proprietary (1.36M echocardiograms, 10 standard views)
+</details>
+
+<details>
+<summary><b>Surgical Vision WM</b> - Click to expand</summary>
+
+- **Training & Evaluation**: SurgToolLoc-2022
+</details>
+
+<details>
+<summary><b>WM-Grasp</b> - Click to expand</summary>
+
+- **Training**: Simulation environment
+- **Evaluation**: Real robot with 5 types of surgical objects
+</details>
+
+<details>
+<summary><b>SurgWorld</b> - Click to expand</summary>
+
+- **SATA Dataset** (created by authors): 2,447 clips, 300K+ frames, 8 procedures
+- **Source datasets**: GraSP, SAR-RARP50, Multiypass140, SurgicalActions160, AutoLaparo, HeiCo, YouTube surgical channels
+</details>
+
+<details>
+<summary><b>Suturing WM</b> - Click to expand</summary>
+
+- **Training**: 102 simulation training videos (~2K annotated clips)
+</details>
+
+<details>
+<summary><b>Thrombectomy WM</b> - Click to expand</summary>
+
+- **Simulation**: stEVE framework
+- **Patient Data**: 10 CTA scans (UK REC 24/LO/0057)
+</details>
 
 ---
 
@@ -253,6 +375,11 @@ Prediction Conditioned Rollouts       & Control
 
 | Project | Description | Code |
 |---------|-------------|------|
-| Surgical Vision World Model | Action-controllable surgical video generation | [Github](https://github.com/bhattarailab/Surgical-Vision-World-Model) |
-| CLARITY | Treatment decision world model | 🔜 Coming Soon |
-| CheXWorld | X-ray representation learning | 🔜 Coming Soon |
+| EchoWorld | Echocardiography probe guidance world model | [GitHub](https://github.com/LeapLabTHU/EchoWorld) |
+| CheXWorld | X-ray representation learning | [GitHub](https://github.com/LeapLabTHU/CheXWorld) |
+| Surgical Vision World Model | Action-controllable surgical video generation | [GitHub](https://github.com/bhattarailab/Surgical-Vision-World-Model) |
+| MeWM | Medical world model for tumor evolution | [GitHub](https://github.com/scott-yjyang/MeWM) |
+| stEVE | Endovascular simulation framework | [GitHub](https://github.com/lkarstensen/stEVE) |
+| TD-MPC2 | Model-based RL for world models | [GitHub](https://github.com/nicklashansen/tdmpc2) |
+| Suturing World Model | Predictive models for surgical suturing | [Project Page](https://mkturkcan.github.io/suturingmodels/) |
+| CLARITY | Treatment decision world model | [Project Page](https://dingtianxingjian.github.io/clarity-project-page/) |
