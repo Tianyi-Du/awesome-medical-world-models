@@ -17,7 +17,6 @@
 - [Papers by Application](#papers-by-application)
   - [Medical Imaging \& Diagnostics](#medical-imaging--diagnostics)
   - [Surgical Vision \& Robotics](#surgical-vision--robotics)
-  - [Disease Progression (EHR)](#disease-progression-ehr)
   - [Treatment Planning](#treatment-planning)
 - [Capability Matrix](#capability-matrix)
 - [Foundation World Models](#foundation-world-models)
@@ -134,20 +133,6 @@ Prediction Conditioned Rollouts       & Control
 
 > Action-conditioned 3D generator that simulates post-treatment tumor states for protocol selection.
 
-**TaDiff: Treatment-aware Diffusion Probabilistic Model for Longitudinal MRI Generation.** [Sep 2023]<br>
-*Q. Liu, et al.*<br>
-`L2-L3` `MRI` `Glioma` `Diffusion` `Longitudinal`<br>
-[[PDF](https://arxiv.org/abs/2309.05406)]
-
-> Treatment-aware diffusion model predicting longitudinal MRI evolution of diffuse glioma under different treatment protocols.
-
-**mi-GAN: Multi-Information GAN for Alzheimer's Disease Progression Prediction.** [2021]<br>
-*Y. Zhao, B. Ma, P. Jiang, et al.*<br>
-`L1` `MRI` `Alzheimer` `GAN` `Progression`<br>
-[[PDF](https://ieeexplore.ieee.org/document/9311194)]
-
-> Multi-information GAN predicts future 3D brain MRI from baseline scans, modeling Alzheimer's disease progression.
-
 ---
 
 #### Ultrasound
@@ -186,24 +171,6 @@ Prediction Conditioned Rollouts       & Control
 
 ---
 
-### Disease Progression (EHR)
-
-**Foresight: A Generative Pretrained Transformer for Modelling Patient Timelines.** [Lancet Digital Health, 2024]<br>
-*Zeljko Kraljevic, Dan Bean, Anthony Shek, et al.*<br>
-`L1` `EHR` `Transformer` `Event Forecasting` `Large-scale`<br>
-[[PDF](https://www.thelancet.com/journals/landig/article/PIIS2589-7500(24)00025-6/fulltext)]
-
-> Generative Transformer converts clinical text into encoded concepts, auto-regressively predicting future diseases, procedures, medications, and other events.
-
-**CoMET: Generative Medical Event Models Improve with Scale.** [Aug 2025]<br>
-*Shane Waxler, Paul Blazek, Davis White, et al. (Microsoft/Epic)*<br>
-`L1` `EHR` `Scaling Laws` `Billions of Events` `Epic Cosmos`<br>
-[[PDF](https://arxiv.org/abs/2508.12104)]
-
-> Trains decoder-only Transformer on billions of medical events, demonstrating scaling laws and improving multi-task prediction.
-
----
-
 ### Treatment Planning
 
 **CLARITY** (see MRI & Tumor Modeling section above)<br>
@@ -226,13 +193,9 @@ A quick comparison of capability levels across papers:
 | EchoWorld | | ✅ | | | Ultrasound | World Model |
 | Cardiac Copilot | | ✅ | | | Ultrasound | WM + Nav |
 | MeWM | | ✅ | ✅ | | Tumor/CT | Diffusion |
-| TaDiff | | ✅ | ✅ | | MRI/Glioma | Diffusion |
 | CLARITY | | ✅ | ✅ | ✅ | MRI/Treatment | Latent Dynamics |
-| mi-GAN | ✅ | | | | MRI/Alzheimer | GAN |
 | Surgical Vision WM | | ✅ | ✅ | | Surgery | VQ-VAE + Transformer |
 | WM-Grasp | | | | ✅ | Surgical Robotics | Dreamer-style |
-| Foresight | ✅ | | | | EHR | Transformer |
-| CoMET | ✅ | | | | EHR | Transformer |
 
 ---
 
@@ -291,8 +254,7 @@ Step 2: Learn about medical applications
 Step 3: Dive into specific areas based on interest
         ├── Medical Imaging → CheXWorld, X-WIN
         ├── Surgical Robotics → Surgical Vision WM, WM-Grasp
-        ├── Tumor Treatment → CLARITY, MeWM
-        └── Disease Prediction → Foresight, CoMET
+        └── Tumor Treatment → CLARITY, MeWM
 ```
 
 ### For Reproduction
@@ -303,7 +265,6 @@ Step 3: Dive into specific areas based on interest
 | CheXWorld | ✅ Available | ⭐⭐ Medium | PyTorch |
 | CLARITY | 🔜 Coming | ⭐⭐⭐ Hard | PyTorch |
 | MeWM | ❓ Unknown | - | - |
-| Foresight | ✅ Available | ⭐⭐ Medium | PyTorch |
 
 ---
 
@@ -319,6 +280,8 @@ Submit an Issue or PR with:
 - Capability level (L1-L4)
 - Application domain tags
 - Github link (if available)
+
+**Important:** Only papers that explicitly claim to be "World Models" will be included.
 
 ---
 

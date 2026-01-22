@@ -77,31 +77,7 @@ Prerequisites:
 
 ---
 
-## Direction C: Disease Progression / EHR
-
-**Target Audience**: Those interested in clinical data and electronic health records
-
-### Core Papers
-
-| Order | Paper | Capability Level | Focus |
-|-------|-------|------------------|-------|
-| 1 | Foresight | L1 | Transformer for EHR temporal modeling |
-| 2 | CoMET | L1 | Scaling laws, large-scale training |
-| 3 | Dynamic DeepHit | - | Dynamic survival analysis (background) |
-
-### Technical Stack
-
-```
-Prerequisites:
-├── Transformer / GPT Architecture
-├── Survival Analysis
-├── EHR Data Processing
-└── Temporal Modeling
-```
-
----
-
-## Direction D: Treatment Planning
+## Direction C: Treatment Planning
 
 **Target Audience**: Those interested in clinical decision support and treatment optimization
 
@@ -110,8 +86,7 @@ Prerequisites:
 | Order | Paper | Capability Level | Focus |
 |-------|-------|------------------|-------|
 | 1 | MeWM | L3 | Treatment protocol comparison |
-| 2 | TaDiff | L2-L3 | Treatment-aware prediction |
-| 3 | CLARITY | L4 | Complete decision closed-loop |
+| 2 | CLARITY | L4 | Complete decision closed-loop |
 
 ### Technical Stack
 
@@ -133,7 +108,6 @@ Prerequisites:
 |-------|------------|-----------|----------|
 | Surgical Vision WM | ⭐⭐ | 1-2 weeks | 1x A100 |
 | CheXWorld | ⭐⭐ | 1-2 weeks | 1x A100 |
-| Foresight | ⭐⭐ | 1 week | CPU/GPU |
 
 ### Recommended Order
 
