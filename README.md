@@ -5,7 +5,6 @@
 
 > A curated list of **World Models for Healthcare**: prediction, simulation, counterfactual reasoning, and clinical decision support.
 
-
 ---
 
 ## Table of Contents
@@ -14,15 +13,10 @@
 - [Capability Levels (L1-L4)](#capability-levels-l1-l4)
 - [Survey \& Review](#survey--review)
 - [Papers by Application](#papers-by-application)
-  - [Medical Imaging \& Diagnostics](#medical-imaging--diagnostics)
-  - [Surgical Vision \& Robotics](#surgical-vision--robotics)
-  - [Treatment Planning](#treatment-planning)
 - [Capability Matrix](#capability-matrix)
 - [Foundation World Models](#foundation-world-models)
 - [Datasets \& Benchmarks](#datasets--benchmarks)
 - [Open-Source Projects](#open-source-projects)
-- [Reading Roadmap](#reading-roadmap)
-- [Citation](#citation)
 
 ---
 
@@ -181,8 +175,6 @@ Prediction Conditioned Rollouts       & Control
 
 ## Capability Matrix
 
-A quick comparison of capability levels across papers:
-
 | Paper | L1 | L2 | L3 | L4 | Domain | Architecture |
 |-------|:--:|:--:|:--:|:--:|--------|--------------|
 | CheXWorld | ✅ | | | | Radiology | JEPA |
@@ -198,8 +190,6 @@ A quick comparison of capability levels across papers:
 ---
 
 ## Foundation World Models
-
-Foundational world model works from the general domain, essential for understanding medical applications:
 
 | Paper | Year | Venue | Key Contribution |
 |-------|------|-------|------------------|
@@ -229,67 +219,8 @@ Foundational world model works from the general domain, essential for understand
 
 ## Open-Source Projects
 
-| Project | Description | Code | Stars |
-|---------|-------------|------|-------|
-| Surgical Vision World Model | Action-controllable surgical video generation | [Github](https://github.com/bhattarailab/Surgical-Vision-World-Model) | ![](https://img.shields.io/github/stars/bhattarailab/Surgical-Vision-World-Model?style=social) |
-| CLARITY | Treatment decision world model | 🔜 Coming Soon | - |
-| CheXWorld | X-ray representation learning | 🔜 Coming Soon | - |
-
----
-
-## Reading Roadmap
-
-### For Beginners
-
-```
-Step 1: Understand World Model fundamentals
-        ├── Ha & Schmidhuber, "World Models" (2018) ⭐ Must read
-        └── LeCun, "A Path Towards Autonomous Machine Intelligence" (2022)
-
-Step 2: Learn about medical applications
-        └── Qazi et al., "Beyond Generative AI" (2025) ⭐ Must read
-
-Step 3: Dive into specific areas based on interest
-        ├── Medical Imaging → CheXWorld, X-WIN
-        ├── Surgical Robotics → Surgical Vision WM, WM-Grasp
-        └── Tumor Treatment → CLARITY, MeWM
-```
-
-### For Reproduction
-
-| Paper | Code Availability | Difficulty | Framework |
-|-------|-------------------|------------|-----------|
-| Surgical Vision WM | ✅ Full | ⭐⭐ Medium | PyTorch |
-| CheXWorld | ✅ Available | ⭐⭐ Medium | PyTorch |
-| CLARITY | 🔜 Coming | ⭐⭐⭐ Hard | PyTorch |
-| MeWM | ❓ Unknown | - | - |
-
----
-
-## Citation
-
-If this list is helpful for your research, please consider citing:
-
-```bibtex
-@misc{awesome-medical-world-models,
-  author = {yuna022},
-  title = {Awesome Medical World Models},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/yuna022/awesome-medical-world-models}
-}
-```
-
----
-
-## Acknowledgments
-
-Thanks to all paper authors for their contributions, and [awesome-medical-vision-language-models](https://github.com/yangzhou12/awesome-medical-vision-language-models) for format reference.
-
----
-
-<div align="center">
-  <b>Made with ❤️ for the Medical AI Community</b>
-  <br><br>
-  <a href="#awesome-medical-world-models">⬆️ Back to Top</a>
-</div>
+| Project | Description | Code |
+|---------|-------------|------|
+| Surgical Vision World Model | Action-controllable surgical video generation | [Github](https://github.com/bhattarailab/Surgical-Vision-World-Model) |
+| CLARITY | Treatment decision world model | 🔜 Coming Soon |
+| CheXWorld | X-ray representation learning | 🔜 Coming Soon |
