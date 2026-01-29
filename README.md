@@ -13,6 +13,7 @@
 - [What is Medical World Model?](#what-is-medical-world-model)
 - [Capability Levels (L1-L4)](#capability-levels-l1-l4)
 - [Survey \& Review](#survey--review)
+- [Papers by Method](Papers-by-Method)
 - [Papers by Application](#papers-by-application)
 - [Capability Matrix](#capability-matrix)
 - [Datasets \& Benchmarks](#datasets--benchmarks)
@@ -78,6 +79,12 @@ Prediction Conditioned Rollouts       & Control
 |-------|-------|------|-------|
 | **Beyond Generative AI: World Models for Clinical Prediction, Counterfactuals, and Planning** | NeurIPS Workshop | 2025 | [[PDF](https://arxiv.org/abs/2511.16333)] |
 | **Machine Learning in Modeling Disease Trajectory and Treatment Outcomes: An Emerging Enabler for Model-Informed Precision Medicine** | Clinical Pharmacology & Therapeutics | 2024 | [[PDF](https://ascpt.onlinelibrary.wiley.com/doi/10.1002/cpt.3153)] [[PubMed](https://pubmed.ncbi.nlm.nih.gov/38105646/)] |
+
+---
+
+## Papers by Method
+
+
 
 ---
 
