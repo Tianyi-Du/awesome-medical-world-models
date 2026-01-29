@@ -7,6 +7,14 @@
 
 ---
 
+## Contributors
+
+- **Tianyi Du**                                -**Siying Li**
+  Nanyang Technological University              Nanyang Technological University
+  DUTI0002@e.ntu.edu.sg                         SIYING005@e.ntu.edu.sg
+
+---
+
 ## Table of Contents
 
 - [What is Medical World Model?](#what-is-medical-world-model)
