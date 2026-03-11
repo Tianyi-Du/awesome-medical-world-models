@@ -1,7 +1,7 @@
 # Awesome Medical World Models
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Last Update](https://img.shields.io/badge/last%20update-January%202025-blue)]()
+[![Last Update](https://img.shields.io/badge/last%20update-March%202026-blue)]()
 
 > A curated list of **World Models for Healthcare**: prediction, simulation, counterfactual reasoning, and clinical decision support.
 
@@ -12,6 +12,7 @@
 - [What is Medical World Model?](#what-is-medical-world-model)
 - [Capability Levels (L1-L4)](#capability-levels-l1-l4)
 - [Survey \& Review](#survey--review)
+- [Papers by Method](#papers-by-method)
 - [Papers by Application](#papers-by-application)
 - [Capability Matrix](#capability-matrix)
 - [Datasets \& Benchmarks](#datasets--benchmarks)
@@ -80,6 +81,27 @@ Prediction Conditioned Rollouts       & Control
 
 ---
 
+## Papers by Method
+
+### 🧩Latent World Model
+**Enhancing End-to-End Autonomous Driving with Latent World Model** [Jun 2024]<br>
+*Yingyan Li, Lue Fan, Jiawei He, Yuqi Wang, Yuntao Chen, Zhaoxiang Zhang, Tieniu Tan*<br>
+[[PDF](https://arxiv.org/abs/2406.08481)]
+
+**DREAM TO CONTROL: LEARNING BEHAVIORS BY LATENT IMAGINATION** [Mar 2020]<br>
+*Danijar Hafner, Timothy Lillicrap, Jimmy Ba, Mohammad Norouzi*<br>
+[[PDF](https://arxiv.org/pdf/1912.01603v3)]
+
+### 🧩Open-source Implementations
+**LingBot-World: Advancing Open-source World Models** [Jan 2026]<br>
+*Robbyant Team (Zelin Gao, Qiuyu Wang, Yanhong Zeng, et al.)*<br>
+Open-source Diffusion Real-time Long-horizon MoE<br>
+[[PDF](https://arxiv.org/abs/2601.20540)] [[Github](https://github.com/Robbyant/lingbot-world)]
+
+> Fully open-source world model with three-stage training (pre-train → knowledge injection → interaction readiness). Supports 10-minute video generation with sub-second latency, emergent spatial memory, and multi-modal control. Achieves SOTA on VBench.
+
+---
+
 ## Papers by Application
 
 ### Medical Imaging & Diagnostics
@@ -110,6 +132,20 @@ Prediction Conditioned Rollouts       & Control
 ---
 
 #### MRI & Tumor Modeling
+
+**Brain-WM: Brain Glioblastoma World Model.** [Mar 2026]<br>
+*Chenhui Wang, Boyun Zheng, Liuxin Bao, Zhihao Peng, Peter Y. M. Woo, Hongming Shan, Yixuan Yuan.*<br>
+`L2-L3-L4` `MRI` `Glioblastoma` `Mixture-of-Transformers` `Treatment Planning`<br>
+[[PDF](https://arxiv.org/abs/2603.07562)] [[Github](https://github.com/thibault-wch/Brain-GBM-world-model)]
+
+> Unifies next-step treatment prediction and future MRI generation to model the co-evolution of glioblastoma and treatment response.
+
+**MRI Contrast Enhancement Kinetics World Model.** [CVPR 2026]<br>
+*Jindi Kong, Yuting He, Cong Xia, Rongjun Ge, Shuo Li.*<br>
+`L1` `MRI` `DCE-MRI` `Spatiotemporal Consistency` `Kinetics Modeling`<br>
+[[PDF](https://arxiv.org/abs/2602.19285)] [[Github](https://github.com/DD0922/MRI-Contrast-Enhancement-Kinetics-World-Model)]
+
+> Simulates continuous contrast enhancement dynamics from non-contrast MRI using latent alignment and temporal consistency constraints.
 
 **CLARITY: Medical World Model for Guiding Treatment Decisions by Modeling Context-Aware Disease Trajectories in Latent Space.** [Dec 2025]<br>
 *Tianxingjian Ding, Yuanhao Zou, Chen Chen, Mubarak Shah, Yu Tian.*<br>
@@ -152,6 +188,31 @@ Prediction Conditioned Rollouts       & Control
 
 ---
 
+### Clinical Trajectories & EHR
+
+**EHRWorld: A Patient-Centric Medical World Model for Long-Horizon Clinical Trajectories.** [Feb 2026]<br>
+*Linjie Mu, Zhongzhen Huang, Yannian Gu, Shengqian Qin, Shaoting Zhang, Xiaofan Zhang.*<br>
+`L2-L3` `EHR` `Patient Simulation` `Causal Sequential` `Longitudinal`<br>
+[[PDF](https://arxiv.org/abs/2602.03569)]
+
+> Patient-centric medical world model trained on EHRWorld-110K for long-horizon clinical simulation under sequential interventions.
+
+**The Patient is not a Moving Document: A World Model Training Paradigm for Longitudinal EHR.** [Jan 2026]<br>
+*Irsyad Adam, Zekai Chen, David Laprade, Shaun Porwal, David Laub, Erik Reinertsen, Arda Pekis, Kevin Brown.*<br>
+`L1-L2` `Structured EHR` `JEPA-style` `Trajectory Modeling` `Foundation Model`<br>
+[[PDF](https://arxiv.org/abs/2601.22128)] [[Weights](https://huggingface.co/standardmodelbio/SMB-v1-1.7B-Structure)]
+
+> Introduces SMB-Structure, combining JEPA-style latent forecasting with supervised token reconstruction to encode longitudinal disease dynamics.
+
+**World Model Enhanced Offline Reinforcement Learning for Sequential Intervention Optimization in Acute Kidney Injury.** [AI Medicine 2026]<br>
+*Bailing Zhang, Yuwei Mi.*<br>
+`L2-L3-L4` `AKI` `Offline RL` `FNO-Transformer` `Clinical Decision Support`<br>
+[[PDF](https://media.sciltp.com/articles/2602002965/2602002965.pdf)] [[DOI](https://doi.org/10.53941/aim.2026.100002)]
+
+> Combines an ensemble FNO-Transformer world model with stage-aware IQL to optimize sequential AKI interventions from offline ICU records.
+
+---
+
 ### Surgical Vision & Robotics
 
 **Surgical Vision World Model.** [Sep 2025]<br>
@@ -160,6 +221,13 @@ Prediction Conditioned Rollouts       & Control
 [[PDF](https://arxiv.org/abs/2503.02904)] [[Github](https://github.com/bhattarailab/Surgical-Vision-World-Model)]
 
 > First surgical vision world model that learns latent actions from unlabeled surgical videos, enabling action-controllable surgical data generation.
+
+**Learning Action-Conditioned World Models for Cataract Surgery from Unlabeled Videos.** [MIDL 2026]<br>
+*Nisarg A. Shah, Mingze Xia, Shameema Sikder, S. Swaroop Vedula, Vishal M. Patel.*<br>
+`L2-L3` `Cataract Surgery` `Latent Action` `V-JEPA` `Unlabeled Video`<br>
+[[PDF](https://openreview.net/forum?id=aYQYOVm2AB)]
+
+> Learns action-conditioned surgical dynamics from unlabeled cataract videos using latent action tokens and feature-space future prediction.
 
 **World Models for General Surgical Grasping.** [May 2024]<br>
 *Guangyao Lin, Xinyue Yan, Yuzhou Hu, et al.*<br>
@@ -193,11 +261,17 @@ Prediction Conditioned Rollouts       & Control
 
 ### Treatment Planning
 
+**Brain-WM** (see MRI & Tumor Modeling section above)<br>
+`L4` `Glioblastoma` `Treatment Planning`
+
 **CLARITY** (see MRI & Tumor Modeling section above)<br>
 `L4` `Treatment Planning` `Inverse Survival Evaluation`
 
 **MeWM** (see MRI & Tumor Modeling section above)<br>
 `L3` `Protocol Selection` `Action-Conditioned`
+
+**WME-ORL** (see Clinical Trajectories & EHR section above)<br>
+`L4` `Sequential Intervention` `Offline RL`
 
 ---
 
@@ -208,12 +282,18 @@ Prediction Conditioned Rollouts       & Control
 | CheXWorld | ✅ | | | | Radiology | JEPA |
 | X-WIN | ✅ | ✅ | | | Radiology | JEPA |
 | Xray2Xray | ✅ | | | | Radiology | Transformer |
+| MRI CEKWorld | ✅ | | | | MRI | STCL |
+| Brain-WM | | ✅ | ✅ | ✅ | GBM/MRI | MoT + Flow |
 | EchoWorld | | ✅ | | | Ultrasound | World Model |
 | Cardiac Copilot | | ✅ | | | Ultrasound | WM + Nav |
 | Structure-aware WM | | ✅ | | | Ultrasound | Self-supervised |
+| EHRWorld | | ✅ | ✅ | | Clinical EHR | Causal Sequential LM |
+| SMB-Structure | ✅ | ✅ | | | Clinical EHR | JEPA + SFT |
+| WME-ORL | | ✅ | ✅ | ✅ | AKI/EHR | FNO-Transformer + IQL |
 | MeWM | | ✅ | ✅ | | Tumor/CT | Diffusion |
 | CLARITY | | ✅ | ✅ | ✅ | MRI/Treatment | Latent Dynamics |
 | Surgical Vision WM | | ✅ | ✅ | | Surgery | VQ-VAE + Transformer |
+| Cataract SurgWorld | | ✅ | ✅ | | Cataract Surgery | LAT + V-JEPA |
 | WM-Grasp | | | | ✅ | Surgical Robotics | Dreamer-style |
 | SurgWorld | | | | ✅ | Surgical Robot | Cosmos 2.5 |
 | Suturing WM | | | ✅ | | Surgical | Diffusion |
@@ -242,15 +322,33 @@ Prediction Conditioned Rollouts       & Control
 
 | Dataset | Size | Used By | Availability | Link |
 |---------|------|---------|--------------|------|
-| MU-Glioma-Post | 203 patients, 654 MRIs | CLARITY | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/mu-glioma-post/) |
-| UCSF-ALPTDG | 298 patients, 596 MRIs | CLARITY | 🔓 Public | [UCSF Datasets](https://imagingdatasets.ucsf.edu/dataset/2) |
+| MU-Glioma-Post | 203 patients, 654 MRIs | CLARITY, Brain-WM | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/mu-glioma-post/) |
+| UCSF-ALPTDG | 298 patients, 596 MRIs | CLARITY, Brain-WM | 🔓 Public | [UCSF Datasets](https://imagingdatasets.ucsf.edu/dataset/2) |
 | I-SPY2 | Multi-center trial | CLARITY | 🔐 Application | [Quantum Leap Healthcare](https://www.quantumleaphealth.org/) |
 | HCC-TACE-SEG | 105 patients | MeWM | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/hcc-tace-seg/) |
+
+### Dynamic Contrast MRI Datasets
+
+| Dataset | Size | Used By | Availability | Link |
+|---------|------|---------|--------------|------|
+| Abdominal DCE-MRI | 91 patients, 16 phases | MRI CEKWorld | 🔒 Private | [Paper](https://arxiv.org/abs/2602.19285) |
+| Duke Breast DCE-MRI | 922 examinations | MRI CEKWorld | 🔓 Public | [TCIA](https://www.cancerimagingarchive.net/collection/duke-breast-cancer-mri/) |
+
+### EHR / Clinical Trajectory Datasets
+
+| Dataset | Size | Used By | Availability | Link |
+|---------|------|---------|--------------|------|
+| EHRWorld-110K | 110,513 episodes, 17.5M events | EHRWorld | 🔒 Derived / not separately released | [Paper](https://arxiv.org/abs/2602.03569) |
+| MIMIC-IV | Source database for EHRWorld-110K | EHRWorld | 🔐 Credentialed | [PhysioNet](https://physionet.org/content/mimiciv/) |
+| Memorial Sloan Kettering cohort | 23,319 patients, 323K+ patient-years | SMB-Structure | 🔒 Institutional | [Paper](https://arxiv.org/abs/2601.22128) |
+| INSPECT | 19,402 patients | SMB-Structure | 🔒 Institutional | [Paper](https://arxiv.org/abs/2601.22128) |
+| MIMIC-IV AKI cohort | 46,337 ICU patients | WME-ORL | 🔐 Credentialed | [PhysioNet](https://physionet.org/content/mimiciv/) |
 
 ### Surgical Video Datasets
 
 | Dataset | Size | Used By | Availability | Link |
 |---------|------|---------|--------------|------|
+| Cataract-1k | 1,000 videos | Cataract SurgWorld | 🔓 Public | [GitHub](https://github.com/Negin-Ghamsarian/Cataract-1K) |
 | SurgToolLoc-2022 | 24,695 clips | Surgical Vision WM | 🔓 Public | [Grand Challenge](https://surgtoolloc.grand-challenge.org/) |
 | SAR-RARP50 | 50 videos | SurgWorld | 🔓 Public | [Synapse](https://www.synapse.org/#!Synapse:syn27618412) |
 | AutoLaparo | 21 videos | SurgWorld | 🔓 Public | [GitHub](https://github.com/ziyiwangx/AutoLaparo) |
@@ -298,6 +396,20 @@ Prediction Conditioned Rollouts       & Control
 </details>
 
 <details>
+<summary><b>Brain-WM</b> - Click to expand</summary>
+
+- **Internal Cohort**: LUMIERE, MU-Glioma-Post, and UCSF-ALPTDG (527 subjects, 1,659 timepoints; 3,252 timepoint pairs)
+- **External Cohort**: RHUH-GBM and UCSD-PTGBM (61 subjects, 128 timepoints; 72 timepoint pairs)
+</details>
+
+<details>
+<summary><b>MRI CEKWorld</b> - Click to expand</summary>
+
+- **Training & Evaluation**: Private Abdominal DCE-MRI (91 patients; 1 non-contrast + 15 contrast-enhanced phases)
+- **Training & Evaluation**: Duke Breast DCE-MRI (922 examinations; 3-4 contrast-enhanced timepoints)
+</details>
+
+<details>
 <summary><b>MeWM</b> - Click to expand</summary>
 
 - **Training & Evaluation**: HCC-TACE-SEG (105 HCC patients, pre/post-TACE CT)
@@ -322,9 +434,36 @@ Prediction Conditioned Rollouts       & Control
 </details>
 
 <details>
+<summary><b>EHRWorld</b> - Click to expand</summary>
+
+- **Source Database**: MIMIC-IV
+- **Processed Dataset**: EHRWorld-110K (110,513 hospitalization episodes; ~17.5M clinical events)
+</details>
+
+<details>
+<summary><b>SMB-Structure</b> - Click to expand</summary>
+
+- **Memorial Sloan Kettering Cohort**: 23,319 oncology patients (323K+ patient-years)
+- **INSPECT Cohort**: 19,402 pulmonary embolism patients
+</details>
+
+<details>
+<summary><b>WME-ORL</b> - Click to expand</summary>
+
+- **Training & Evaluation**: 46,337 ICU patients from a MIMIC-IV AKI cohort
+</details>
+
+<details>
 <summary><b>Surgical Vision WM</b> - Click to expand</summary>
 
 - **Training & Evaluation**: SurgToolLoc-2022
+</details>
+
+<details>
+<summary><b>Cataract SurgWorld</b> - Click to expand</summary>
+
+- **Pre-training**: 1,838 internal microscope videos + 753 Cataract-1k videos (2,591 procedures total)
+- **Evaluation**: Cataract-101, D99, Cataract-1k, and Cataract-1k-JHU
 </details>
 
 <details>
@@ -368,3 +507,6 @@ Prediction Conditioned Rollouts       & Control
 | TD-MPC2 | Model-based RL for world models | [GitHub](https://github.com/nicklashansen/tdmpc2) |
 | Suturing World Model | Predictive models for surgical suturing | [Project Page](https://mkturkcan.github.io/suturingmodels/) |
 | CLARITY | Treatment decision world model | [Project Page](https://dingtianxingjian.github.io/clarity-project-page/) |
+| Brain-WM | Glioblastoma treatment-and-imaging world model | [GitHub](https://github.com/thibault-wch/Brain-GBM-world-model) |
+| MRI CEKWorld | Contrast enhancement kinetics world model | [GitHub](https://github.com/DD0922/MRI-Contrast-Enhancement-Kinetics-World-Model) |
+| LingBot-World | Open-source world model with real-time interaction | [GitHub](https://github.com/Robbyant/lingbot-world) |
