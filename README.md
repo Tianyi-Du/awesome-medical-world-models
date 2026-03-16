@@ -212,7 +212,7 @@ Open-source Diffusion Real-time Long-horizon MoE<br>
 
 > Combines an ensemble FNO-Transformer world model with stage-aware IQL to optimize sequential AKI interventions from offline ICU records.
 
-**medDreamer: Model-Based Reinforcement Learning with Latent Imagination on Complex EHRs for Clinical Decision Support**[arXiv 2025]<br> 
+**MedDreamer: Model-Based Reinforcement Learning with Latent Imagination on Complex EHRs for Clinical Decision Support**[arXiv 2025]<br> 
 *Qianyi Xu, Gousia Habib, Feng Wu, Dilruk Perera, Mengling Feng*<br>
 `L4` `RL for Healthcare` `Dynamic Treatment Regimes`
 [[PDF]](https://arxiv.org/abs/2505.19785)
