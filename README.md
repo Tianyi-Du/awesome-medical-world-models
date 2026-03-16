@@ -212,6 +212,11 @@ Open-source Diffusion Real-time Long-horizon MoE<br>
 
 > Combines an ensemble FNO-Transformer world model with stage-aware IQL to optimize sequential AKI interventions from offline ICU records.
 
+**medDreamer: Model-Based Reinforcement Learning with Latent Imagination on Complex EHRs for Clinical Decision Support**[arXiv 2025]<br> 
+*Qianyi Xu, Gousia Habib, Feng Wu, Dilruk Perera, Mengling Feng*<br>
+`L4` `RL for Healthcare` `Dynamic Treatment Regimes`
+[[PDF]](https://arxiv.org/abs/2505.19785)
+> Latent world model with AFI module handles double sparsity (temporal + feature) in EHR data. Two-phase policy training blends real and imagined trajectories for sepsis and MV treatment optimization.
 ---
 
 ### Surgical Vision & Robotics
