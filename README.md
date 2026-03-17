@@ -187,6 +187,12 @@ Open-source Diffusion Real-time Long-horizon MoE<br>
 
 > Large-scale self-supervised pre-training to acquire cardiac structure-aware world model using 1.36M echocardiograms.
 
+**EchoJEPA: A Latent Predictive Foundation Model for Echocardiography.** [arXiv 2026]<br>
+*Alif Munim, Adibvafa Fallahpour, Teodora Szasz, Ahmadreza Attarpour, River Jiang, Brana Sooriyakanthan, Maala Sooriyakanthan, Heather Whitney, Jeremy Slivnick, Barry Rubin, Wendy Tsang, Bo Wang.*<br>
+`L1` `Ultrasound` `Cardiac` `JEPA` `Foundation Model` `Self-Supervised`<br>
+[[PDF](https://arxiv.org/abs/2602.02603)] [[Github](https://github.com/bowang-lab/EchoJEPA)] [[Project](https://echojepa.com/)]
+
+> Largest echocardiography foundation model to date. Latent predictive objective disentangles anatomical signal from speckle noise. Includes multi-view probing framework with factorized stream embeddings for study-level prediction. Zero-shot transfers to pediatric patients with 15% lower error than fine-tuned baselines.
 ---
 
 ### Clinical Trajectories & EHR
