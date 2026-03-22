@@ -225,6 +225,31 @@ Open-source Diffusion Real-time Long-horizon MoE<br>
 > Latent world model with AFI module handles double sparsity (temporal + feature) in EHR data. Two-phase policy training blends real and imagined trajectories for sepsis and MV treatment optimization.
 ---
 
+### Clinical Trajectories & EHR
+
+**EHRWorld: A Patient-Centric Medical World Model for Long-Horizon Clinical Trajectories.** [Feb 2026]<br>
+*Linjie Mu, Zhongzhen Huang, Yannian Gu, Shengqian Qin, Shaoting Zhang, Xiaofan Zhang.*<br>
+`L2-L3` `EHR` `Patient Simulation` `Causal Sequential` `Longitudinal`<br>
+[[PDF](https://arxiv.org/abs/2602.03569)]
+
+> Patient-centric medical world model trained on EHRWorld-110K for long-horizon clinical simulation under sequential interventions.
+
+**The Patient is not a Moving Document: A World Model Training Paradigm for Longitudinal EHR.** [Jan 2026]<br>
+*Irsyad Adam, Zekai Chen, David Laprade, Shaun Porwal, David Laub, Erik Reinertsen, Arda Pekis, Kevin Brown.*<br>
+`L1-L2` `Structured EHR` `JEPA-style` `Trajectory Modeling` `Foundation Model`<br>
+[[PDF](https://arxiv.org/abs/2601.22128)] [[Weights](https://huggingface.co/standardmodelbio/SMB-v1-1.7B-Structure)]
+
+> Introduces SMB-Structure, combining JEPA-style latent forecasting with supervised token reconstruction to encode longitudinal disease dynamics.
+
+**World Model Enhanced Offline Reinforcement Learning for Sequential Intervention Optimization in Acute Kidney Injury.** [AI Medicine 2026]<br>
+*Bailing Zhang, Yuwei Mi.*<br>
+`L2-L3-L4` `AKI` `Offline RL` `FNO-Transformer` `Clinical Decision Support`<br>
+[[PDF](https://media.sciltp.com/articles/2602002965/2602002965.pdf)] [[DOI](https://doi.org/10.53941/aim.2026.100002)]
+
+> Combines an ensemble FNO-Transformer world model with stage-aware IQL to optimize sequential AKI interventions from offline ICU records.
+
+---
+
 ### Surgical Vision & Robotics
 
 **Surgical Vision World Model.** [Sep 2025]<br>
